@@ -4,8 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>마진과 패딩</title>
 <style type="text/css">
-
-* { margin: 0; padding: 0; }
+* {
+	margin: 0;
+	padding: 0;
+}
 
 body {
 	font-family: "돋움", "맑은 고딕";
@@ -17,39 +19,61 @@ body {
 	border: 1px solid #666;
 	width: 300px;
 	background-color: #FFC;
-	
 	padding-top: 10px;
 	padding-right: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
-	
- 	padding: 10px 20px 30px 40px; /* T R B L */ 
- 	padding: 10px 20px 30px;      /* T (R, L), B */ 
- 	padding: 10px 20px;           /* (T, B) (R, L)*/   
-  	padding: 10px;                /* (T, R, B, L)*/
-  	
-  	margin: 100px auto 300px;
-  	margin: 100px auto;
-  	 
-/*   	margin-top: -20px; */
+	padding: 10px 20px 30px 40px; /* T R B L */
+	padding: 10px 20px 30px; /* T (R, L), B */
+	padding: 10px 20px; /* (T, B) (R, L)*/
+	padding: 10px; /* (T, R, B, L)*/
+	margin: 100px auto 300px;
+	margin: 100px auto;
+
+	/*   	margin-top: -20px; */
 }
 </style>
 <script>
-window.onload = function() {
-	elDiv = document.getElementById("box");
-// 	console.log(elDiv);
-	elDiv.onclick = function() {
-		console.log("click");
-	}
-};
+	window.onload = function() {
+		var elDiv = document.getElementById("box");
+		// 	console.log(elDiv);
+		elDiv.onclick = function() {
+			// 		console.log("click");
+			// 		console.log(this); // 이벤트 함수 안의 this  -> 자기께 나옴
+			// 		console.log(this.style.marginTop); // id=box의 style="margin-top: 200px" 정보가 출력됨 -> 200px
+			var intervalId = setInterval(function() {
+				var marginTop = parseInt(elDiv.style.marginTop);
+				if(marginTop < -80) {
+					clearInterval(intervalId);
+					return;
+				}
+				
+				marginTop -= 10;
+				elDiv.style.marginTop = marginTop + "px";
+				console.log(marginTop);
+			}, 100);				
+		}
+	};
 
+	// f = function() {
+	// 	console.log("!");
+	// } -> 바꾸기
+
+	// setTimeout(function() {
+	// 	console.log("!");
+	// }, 3000); // ->Interval로 바꿔보기
+
+	// setTimeout  // 한 번만 움직임 
+	// setTimeout(f, 3000); // 클릭하고 3초후 실행됨
+
+	// setInterval // 주기적으로 움직이게
+	// console.log("!!!!");
 </script>
 
 </head>
 
 <body>
-	<div id="box" class="box1">
-		CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
-	</div>
+	<div id="box" class="box1" style="margin-top: 200px">CSS에서 가장
+		보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.</div>
 </body>
 </html>

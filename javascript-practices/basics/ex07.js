@@ -7,7 +7,7 @@ var myFunction = function() {
     console.log("일반함수");
 }
 
-myFunction();
+myFunction(); // 결과 : 일반함수
 
 // 생성자 함수(관례대로 대문자로 시작)
 var MyObject = function(name, age) {
@@ -18,5 +18,5 @@ var MyObject = function(name, age) {
 var o1 = new MyObject('둘리', 10);
 var o2 = new MyObject('마이콜', 30);
 
-console.log(o1);
-console.log(o2);
+console.log(o1); // 결과 : MyObject {name: '둘리', age: 10}
+console.log(o2); // 결과 : MyObject {name: '마이콜', age: 30}

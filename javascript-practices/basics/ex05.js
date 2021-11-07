@@ -31,11 +31,12 @@ for~in
 */
 
 i = 10;
-var s = "hello world"; console.log(s);
+var s = "hello world"; console.log(s); // 결과 : hello world
+
 
 // 개형의 역할1: ;를 대체한다.
 var s = "hello world"
-console.log(s)
+console.log(s)  // 결과 : hello world
 
 // 개행의 역할2: 상황에 따라서는 토큰을 분리하는 역할
 a
@@ -43,4 +44,4 @@ a
 2
 +
 2
-console.log(a)
+console.log(a)  // 결과 : 4

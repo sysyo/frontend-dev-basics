@@ -70,9 +70,11 @@ a5.forEach(function(e, index) {
     console.log(index + ":" + e); // 결과 : 0:0 / 1:1
 });
 
-Array.prototype.forEach.apply(o5, function(e, index){
-
+Array.prototype.forEach.call(o5, function(e, index){
+    console.log(index + ": " + e);
 });
+
+// apply는 파라미터가 없는 함수를 부를 때 좋다
 
 
 

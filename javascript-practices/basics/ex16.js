@@ -61,6 +61,6 @@ var sum = function() {
     return sum;
 }
 
-// console.log(sum(10, 20));
-// console.log(sum(10, 20, 30));
-// console.log(sum(10, 20, 30, 40, 50));
+console.log(sum(10, 20)); // 결과 : false / 30
+console.log(sum(10, 20, 30)); // 결과 : false / 60
+console.log(sum(10, 20, 30, 40, 50)); // 결과 : false / 150

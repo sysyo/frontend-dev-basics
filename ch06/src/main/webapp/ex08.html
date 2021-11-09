@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+ window.addEventListener("load", function() {
+	 var imgElement = document.createElement("img");
+	 imgElement.src = 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTEwMDlfNTgg%2FMDAxNjMzNzUzODY4MzA0.Z4lINeruXzH-wr5pkumRpzqCpZb-6U3pWjqi9kQkTNYg.uWKXpyfOV23RgZfxhhvt7dBTPunmWSWQm0X-kBk4hXMg.JPEG.miingzy%2FIMG_0739.jpg&type=sc960_832';
+	 imgElement.style.width = "200px";
+	 imgElement.alt = "루피~";
+	 imgElement.title = "귀여운 루피~!!!"; // 이미지에 마우스 가져다 대면 말풍선?생김
+	 imgElement['data-no'] = 10; // 비표준 속성
+	 
+	 setTimeout(function(){
+		 document.body.appendChild(imgElement);
+	 }, 3000);
+ });
+</script>
+</head>
+<body>
+	<h1>DOM(Document Object Model)</h1>
+	<h2>3. HTML Element 속성 조작하기</h2>
+	
+<!-- 	<ul> -->
+<!-- 		<li data-no='1'>...</li> -->
+<!-- 		<li data-no='2'>...</li> -->
+<!-- 	</ul> -->
+</body>
+</html>

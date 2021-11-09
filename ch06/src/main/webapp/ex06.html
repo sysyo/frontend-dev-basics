@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.addEventListener("load", function() {
+	var h3Element = document.createElement("h3"); // 	DOM 이 추가 된 것이 아님
+	var textNode = document.createTextNode("Hello DOM");
+	
+	h3Element.append(textNode);
+	
+	setTimeout(function(){
+		document.body.appendChild(h3Element);
+	}, 3000); // 필수 아님 효과 (더 잘 알아보기 위해 시간 줌)
+});
+</script>
+</head>
+<body>
+	<h1>DOM(Document Object Model)</h1>
+	<h2>2. HTML Element 추가</h2>
+<!-- h3이 생기는 자리 -->
+</body>
+</html>

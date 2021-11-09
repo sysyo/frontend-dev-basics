@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.addEventListener("load", function() {
+	var html = "<h3>Hello DOM</h3>"; // body부분이 전체로 교체됨 -> innerHTML로 수정하면 추가됨
+	setTimeout(function(){
+		document.body.innerHTML += html;
+	}, 3000); // 필수 아님 효과 (더 잘 알아보기 위해 시간 줌)
+});
+</script>
+</head>
+<body>
+	<h1>DOM(Document Object Model)</h1>
+	<h2>2. HTML Element 추가</h2>
+<!-- h3이 생기는 자리 -->
+</body>
+</html>

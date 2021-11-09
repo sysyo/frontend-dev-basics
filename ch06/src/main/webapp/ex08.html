@@ -10,17 +10,18 @@
 	 imgElement.style.width = "200px";
 	 imgElement.alt = "루피~";
 	 imgElement.title = "귀여운 루피~!!!"; // 이미지에 마우스 가져다 대면 말풍선?생김
-	 imgElement['data-no'] = 10; // 비표준 속성
+	 imgElement['data-no'] = 10; // 비표준 속성 (property로 세팅)
 	 
 	 setTimeout(function(){
 		 document.body.appendChild(imgElement);
+// 		 console.log(document.getElementById('h')['data-no']);
 	 }, 3000);
  });
 </script>
 </head>
 <body>
-	<h1>DOM(Document Object Model)</h1>
-	<h2>3. HTML Element 속성 조작하기</h2>
+	<h1 id ='h' data-no='10'>DOM(Document Object Model)</h1>
+	<h2>3. HTML Element 속성 조작하기 1</h2>
 	
 <!-- 	<ul> -->
 <!-- 		<li data-no='1'>...</li> -->

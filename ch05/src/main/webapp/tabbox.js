@@ -2,7 +2,7 @@
 // 1) JavaScript Code(DOM API) 로만 작성하기
 
 var tabBox = {
-	init: function() { // init 실행
+	init: function() { // init 실행❤❤
 		window.addEventListener("load", this.onWindowLoad.bind(this)); // load는 event 이름 - 정해져 있음
 	},
 	onTabClicked: function() {

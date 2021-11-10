@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 소스 버전 (서비스 서버 호스팅 )  -->
+<script type="text/javascript" src="./jquery/jquery-simple.js"></script>
+<script>
+$(function(){
+	var $obj = $(".par");
+	$obj.click(function(){
+		console.log("clicked : " + this); // clicked : [object HTMLParagraphElement]
+	});
+	
+	setTimeout(function(){
+		$obj.css('color', 'red');
+	}, 2000);
+});
+</script>
+</head>
+<body>
+	<h1 id="header">Simple jQuery 만들기 1</h1>
+	<p class='par'>문장 1</p>
+	<p>문장 2</p>
+	<p class='par'>문장 3</p>
+	<p>문장 4</p>
+	<p>문장 5</p>
+</body>
+</html>

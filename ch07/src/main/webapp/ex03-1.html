@@ -5,16 +5,16 @@
 <!-- 소스 버전 (서비스 서버 호스팅 )  -->
 <script type="text/javascript" src="./jquery/jquery-simple.js"></script>
 <script>
-$(function(){
-	var $obj = $(".par");
-	$obj.click(function(){
-		console.log("clicked : " + this); // clicked : [object HTMLParagraphElement]
+	$(function() {
+		var $obj = $(".par");
+		$obj.click(function() {
+			console.log("clicked : " + this); // clicked : [object HTMLParagraphElement]
+		});
+
+		setTimeout(function() {
+			$obj.css('color', 'red');
+		}, 2000);
 	});
-	
-	setTimeout(function(){
-		$obj.css('color', 'red');
-	}, 2000);
-});
 </script>
 </head>
 <body>

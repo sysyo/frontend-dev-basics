@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- 소스 버전 (서비스 서버 호스팅 )  -->
-<script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="./jquery/jquery-simple.js"></script>
 <script>
 $(function(){
 	var $obj = $(".par");
@@ -13,7 +13,12 @@ $(function(){
 	
 	setTimeout(function(){
 		$obj.css('color', 'red');
-	}, 2000);
+	}, 2000);	
+	
+	setTimeout(function(){
+		$("p").css('font-weight', 'bold');
+	}, 4000);
+	
 });
 </script>
 </head>
@@ -23,6 +28,5 @@ $(function(){
 	<p>문장 2</p>
 	<p class='par'>문장 3</p>
 	<p>문장 4</p>
-	<p>문장 5</p>
 </body>
 </html>

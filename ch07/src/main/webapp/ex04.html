@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 소스 버전 (서비스 서버 호스팅 )  -->
+<script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
+<script>
+$(function(){
+	var $obj = $(".par");
+
+	console.log($obj.length); // 2
+	// 배열이 아니라 유사 배열
+	console.log(typeof($obj) + ":" + ($obj instanceof Array)); // 결과 : object:false
+	console.log($obj[0]); // jQuery Object가 아니다. HTMLElement이다. // 결과 : <p class='par'>문장 1</p>
+	console.log($obj.get(0)); // 결과 : <p class='par'>문장 1</p>
+	
+	$obj.css('color', 'red');
+	
+	$obj.click(function() {
+		// 이벤트 핸들러에서 this는 jQuery Object가 아닌 HTMLElement이다.
+		console.log("clicked: " + this); // 결과 : clicked: [object HTMLParagraphElement]
+		
+		var $obj = $(this);
+// 		$obj.css("text-decoration", "underline");
+// 		$obj.text('클릭!');
+
+		// jQery Object의 거의 모든 함수(예외 : traverse)는
+		// 호출한 jQuery Object를 다시 반환한다.
+		// 함수 체인(chain)이 가능하다.
+		$(this)
+			.css("text-decoration", "underline")
+			.text('클릭!!');
+	});
+	
+	
+});
+</script>
+</head>
+<body>
+	<h1 id="header">Simple jQuery 만들기 1</h1>
+	<p class='par'>문장 1</p>
+	<p>문장 2</p>
+	<p class='par'>문장 3</p>
+	<p>문장 4</p>
+</body>
+</html>

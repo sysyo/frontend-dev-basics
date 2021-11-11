@@ -1,5 +1,8 @@
 package com.douzone.ch08.controller.dto;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+@JacksonXmlRootElement(localName = "ApiResult")
 public class JsonResult {
 	private String result;  /* "success" or "fail" */
 	private Object data;    /* if success, set */

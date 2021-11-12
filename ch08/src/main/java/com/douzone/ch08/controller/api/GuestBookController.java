@@ -67,8 +67,7 @@ public class GuestBookController {
 
 		return JsonResult.success(list);
 	}
-	
-	
+		
 	@ResponseBody
 	@RequestMapping("/delete/{no}")
 	public JsonResult ex3(@PathVariable("no") Long no, String password) {

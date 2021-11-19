@@ -70,3 +70,4 @@ const averageScore = function({name: studentName, score:{math=0, korean=0, scien
 
 averageScore(student);
 
+// ex06 - 배열
